@@ -1,82 +1,47 @@
+import { motion } from 'framer-motion'
 import Head from 'next/head'
+import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="absolute h-screen w-full bg-black">
       <Head>
-        <title>Create Next App</title>
+        <title>Catedral</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
+      <div className="relative md:mt-40 mt-24 left-0 right-0 m-auto bg-white w-4/5 h-1/2 p-2">
+        <Image loading="eager" src="/guate.jpg" layout="fill" className="object-cover" />
+      </div>
+      <div className="absolute z-10 md:left-1/3 left-4 md:bottom-1/4 bottom-1/3">
+        <div className="relative z-20 md:text-8xl text-3xl font-semibold text-white overflow-hidden">
+          <motion.div
+            animate={{ y: 0 }}
+            initial={{ y: '200%' }}
+            className="md:h-28 pt-2"
+            transition={{ type: 'linear', duration: 1 }}
           >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+            Inmaculada Concepcion
+          </motion.div>
         </div>
-      </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div
+          className="relative z-10 md:text-4xl text-xl font-thin text-white overflow-hidden"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
+          <motion.div
+            animate={{ y: 0 }}
+            initial={{ y: '200%' }}
+            className="md:h-12 -mt-2"
+            transition={{ ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75 }}
+          >
+            Catedral Huehuetenango
+          </motion.div>
+        </div>
+      </div>
+      {/* <div className="absolute z-10 text-9xl font-semibold text-white left-1/3 bottom-1/3">
+        Inmaculada Concepcion
+      </div> */}
+
+
+      {/* <div className="bg-black w-full h-full"/> */}
     </div>
   )
 }
