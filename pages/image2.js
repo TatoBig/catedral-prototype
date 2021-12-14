@@ -13,7 +13,7 @@ export default function Home() {
 
         <div className="absolute h-screen w-full">
           <div className="relative md:mt-40 left-0 right-0 m-auto md:w-4/5 md:h-1/2 h-2/3">
-            <Image priority alt="Imagen iglesia catedral" loading="eager" src="/guate.jpg" layout="fill" className=" mix-blend-lighten object-[-300px] md:object-center object-cover" />
+            <Image priority alt="Imagen iglesia catedral" loading="eager" src="/iglesia2.png" layout="fill" className=" mix-blend-lighten object-[-400px] md:object-center object-cover" />
             <div
               className="absolute md:from-trasparent bg-gradient-to-t from-black h-4 to-transparent bottom-0 w-full text-white rounded-b"
             />
@@ -63,17 +63,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* <div className="bg-white h-0.5 w-full" />
-      <div className="bg-black w-full h-screen flex">
-        <div className="bg-gray-500 w-1/2">
-          <div className="h-1/2">
-            Texto
-          </div>
-        </div>
-        <div className="bg-gray-200 w-1/2">
-          Contenido
-        </div>
-      </div> */}
     </>
   )
 }
